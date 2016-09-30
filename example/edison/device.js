@@ -41,7 +41,7 @@ async.waterfall([
     console.log(colors.green('5. content Instance 주기적 생성 시작'));
     var edison = new Edison(board.sensor);
     edison.on('ready', function() {
-      var mqttClient = new MQTTClient(config.nodeID);
+      var mqttClient = new MQTTClient(config);
       mqttClient.on('message', function(topic, message){
         var msgs = message.toString().split(',');
         var msg = msgs.join();
@@ -78,4 +78,3 @@ async.waterfall([
     edison.control(req.target, req.cmd);
   }
 });
-

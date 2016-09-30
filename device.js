@@ -48,7 +48,7 @@ async.waterfall([
     },UPDATE_CONTENT_INTERVAL);
 
     console.log(colors.green('6. 제어 명령 수신 MQTT 연결'));
-    var mqttClient = new MQTTClient(config.nodeID);
+    var mqttClient = new MQTTClient(config);
     mqttClient.on('message', function(topic, message){
       var msgs = message.toString().split(',');
       console.log(colors.red('#####################################'));
