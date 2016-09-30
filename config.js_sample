@@ -1,4 +1,9 @@
 module.exports = {
+  host: 'onem2m.sktiot.com', // host url
+  port: '9000', // host port
+  path : '/ThingPlug',  // default host path
+  mqtt : 'mqtt://onem2m.sktiot.com', // mqtt url
+  mqttSubTopic : "/oneM2M/req/+/", // mqtt client subscribe topic
   uKey : 'USER_KEY_FROM_SANDBOX.SKIOT.COM', // Thingplug(https://sandbox.sktiot.com) 로그인 후, `마이페이지`에 있는 사용자 인증키
   nodeID : '0.2.481.1.101.01000000000', // Device 구분을 위한 ID  (본 예제에서는 맨 뒷자리를 핸드폰 번호 사용 권장)
   passCode : '000101', // ThingPlug에 Device등록 시 사용할 Device의 비밀번호 (본 예제에서는 생년월일 사용 권장)
